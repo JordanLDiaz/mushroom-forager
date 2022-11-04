@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Mushroom Forager</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="bg-forest debug">
+
+  <header class="container-fluid">
+    <div class="row text-center p-3">
+      <h1 class="text-light p-2">Mushroom Forager</h1>
+    </div>
+  </header>
+
+
+  <main class="container-fluid">
+    <!-- SECTION this is my click space -->
+    <div class="row">
+      <div class="col-12 p-5">
+        <div class="m-card bg-mushroom img-fluid" id="mushroom" onclick="forage()"></div>
+      </div>
+    </div>
+
+    <!-- SECTION this is my click upgrade count, total mushrooms, time trackers -->
+    <div class="row justify-content-center text-center">
+      <div class="col-3">
+        <button class="bg-success text-light">
+          <!-- <h3>Click Count: </h3> -->
+        </button>
+      </div>
+      <div class="col-3 p-3" id="total-mushrooms">
+        <button class="bg-success text-light">
+          <h2>Total Mushrooms:
+            <div>0</div>
+          </h2>
+        </button>
+      </div>
+      <div class="col-3">
+        <button class="bg-success text-light">
+          <!-- <h3>Auto Time: </h3> -->
+        </button>
+      </div>
+    </div>
+
+    <!-- SECTION this is my shop and stats -->
+    <div class="row text-light text-center">
+      <div class="col-6">
+        <h2>Shop</h2>
+        <div class="row">
+          <div class="col-6 flex-wrap">
+            <h4>Click Upgrades</h4>
+            <button onclick="buyTinyBasket()">Tiny Basket: $<span id="tiny-basket-price">25</span></button>
+            <button onclick="buyMegaBasket()">Mega Basket: $<span id="mega-basket-price">50</span></button>
+          </div>
+          <div class="col-6">
+            <h4>Automatic Upgrades</h4>
+            <button id="friendly-gnome">Friendly Gnome: $<span>100</span></button>
+            <button id="friendly-sprite">Friendly Sprite: $<span>250</span></button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-6">
+        <h2>Stats</h2>
+        <div class="row">
+          <div class="col-6">
+            <h4>Click Stats</h4>
+            <h5>Tiny Baskets: <span id="tiny-basket-quantity">0</span></h5>
+            <h5 id="">Mega Baskets: <span id="mega-basket-quantity">0</span></h5>
+          </div>
+          <div class="col-6">
+            <h4>Automatic Stats</h4>
+            <h5 id="">Friendly Gnomes: 0</h5>
+            <h5 id="">Friendly Sprites: 0</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <h5 class="text-center text-light">Made with ❤ by Me!</h5>
+  </footer>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
