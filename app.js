@@ -1,4 +1,5 @@
 let mushroom = 0
+let click = 1
 
 let clickUpgrades = [
   {
@@ -46,7 +47,10 @@ function forage() {
 }
 
 
-// How to show total amount of resources to be collected per click, and resources collected on auto interval?
+// // How to show total amount of resources to be collected per click, and resources collected on auto interval?
+// function updateClickCount() {
+// }
+
 
 function updateMushroomCount() {
   let template = ''
@@ -57,6 +61,7 @@ function updateMushroomCount() {
     `
   } document.getElementById('total-mushrooms').innerHTML = template
 }
+
 
 // check if user has enough mushrooms
 // if they do, increase tinybasket purchased quantity
